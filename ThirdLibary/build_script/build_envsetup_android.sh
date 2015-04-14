@@ -19,8 +19,8 @@
 
 ANT=/usr/bin/ant         #ant 程序
 #QT_ROOT=/usr/local/Qt-5.5.0-android         #QT 安装根目录
-JOM=make #/c/Qt/Qt5.3.1/Tools/QtCreator/bin/jom       #设置 QT make 工具 JOM
 RABBITIM_MAKE_JOB_PARA="-j2"  #make 同时工作进程参数
+JOM=make #/c/Qt/Qt5.3.1/Tools/QtCreator/bin/jom       #设置 QT make 工具 JOM
 
 if [ -z "$ANDROID_NDK_ROOT" -o -z "$ANDROID_NDK" -o -z "$ANDROID_SDK" -o -z "$ANDROID_SDK_ROOT"	-o -z "$JAVA_HOME" ]; then
 	echo "Please set ANDROID_NDK_ROOT and ANDROID_NDK and ANDROID_SDK and ANDROID_SDK_ROOT and JAVA_HOME"
@@ -59,7 +59,7 @@ case $TARGET_OS in
         RABBITIM_BUILD_HOST="linux-`uname -m`"    #windows、linux-x86_64
         ;;
     *)
-    echo "Please set RABBITIM_BUILD_HOST. see build_android_envsetup.sh"
+    echo "Please set RABBITIM_BUILD_HOST. see build_envsetup_android.sh"
     return 2
     ;;
 esac
